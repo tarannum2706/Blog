@@ -1,0 +1,16 @@
+
+<h2>Add Comments</h2>
+<br>
+<%= form_for([@post,@post.comments.build]) do |f| %>
+  <div>
+    <%= f.text_field :name,placeholder:'Name'%>
+  </div>
+<br>
+  <div>
+    <%= f.text_area :body,placeholder:'Comment'%>
+  </div>
+
+  <div>
+    <%= f.submit class:'btn btn-primary' %>
+  </div>
+  <% end %>

@@ -1,0 +1,17 @@
+<div id="<%= dom_id post %>">
+  <%= link_to "Back", posts_path, class:'btn btn-primary' %><br><br>
+  <p>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= post.description %>
+  </p>
+  <br/>
+  <h2><%= @post.comments.count %> Comments</h2>
+  <br><hr>
+   <%= render @post.comments%>
+    <%= render 'comments/form' %>
+</div>
